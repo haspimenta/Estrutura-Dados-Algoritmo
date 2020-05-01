@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dcf43407-60d5-4c53-adea-4900b92f0cf3" name="Default Changelist" comment="" />
+    <list default="true" id="51bb9e39-2c37-414a-b599-23120a8f5b58" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BucketSort.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BucketSort.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Insertion.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,50 +20,126 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Script" />
+        <option value="Class" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
-  <component name="ProjectId" id="1Y09z2IvchTJVNF5I5HXkFrVtYF" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1bGaUD3uO8555gooDelNueXSVHo" />
   <component name="ProjectViewState">
+    <option name="flattenPackages" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Área de Trabalho/BucketSort" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunManager" selected="Application.Insertion">
+    <configuration name="BucketSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BucketSort" />
+      <module name="BucketSort" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Insertion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Insertion" />
+      <module name="BucketSort" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Insertion" />
+        <item itemvalue="Application.BucketSort" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="dcf43407-60d5-4c53-adea-4900b92f0cf3" name="Default Changelist" comment="" />
-      <created>1582068911682</created>
+      <changelist id="51bb9e39-2c37-414a-b599-23120a8f5b58" name="Default Changelist" comment="" />
+      <created>1588260897344</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1582068911682</updated>
-      <workItem from="1582068952861" duration="470000" />
-      <workItem from="1582081873157" duration="2073000" />
-      <workItem from="1585598328645" duration="1551000" />
+      <updated>1588260897344</updated>
     </task>
     <servers />
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="370" y="171" key="com.intellij.ide.util.TipDialog" timestamp="1585598328496">
-      <screen x="67" y="27" width="1299" height="636" />
+    <state x="275" y="5" width="816" height="723" key="#Intentions" timestamp="1588273691257">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="370" y="171" key="com.intellij.ide.util.TipDialog/67.27.1299.636@67.27.1299.636" timestamp="1585598328496" />
+    <state x="275" y="5" width="816" height="723" key="#Intentions/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588273691257" />
+    <state x="536" y="81" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1588353161502">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="536" y="81" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588353161502" />
+    <state x="434" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1588280887700">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="434" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588280887700" />
+    <state x="486" y="122" key="FileChooserDialogImpl" timestamp="1588362309435">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="486" y="122" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588362309435" />
+    <state width="1323" height="223" key="GridCell.Tab.0.bottom" timestamp="1588281040624">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588281040624" />
+    <state width="1323" height="223" key="GridCell.Tab.0.center" timestamp="1588281040624">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588281040624" />
+    <state width="1323" height="223" key="GridCell.Tab.0.left" timestamp="1588281040623">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588281040623" />
+    <state width="1323" height="223" key="GridCell.Tab.0.right" timestamp="1588281040624">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588281040624" />
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1588281041723">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588281041723" />
+    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1588281041723">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588281041723" />
+    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1588281041722">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588281041722" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1588281041723">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588281041723" />
+    <state x="186" y="0" key="SettingsEditor" timestamp="1588353167762">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="186" y="0" key="SettingsEditor/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588353167762" />
+    <state x="352" y="46" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1588264199569">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="352" y="46" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588264199569" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1588280297964">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588280297964" />
   </component>
 </project>
