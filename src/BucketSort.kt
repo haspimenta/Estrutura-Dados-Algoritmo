@@ -10,11 +10,13 @@ class BucketSort {
                 buckets[i] = ArrayList<Any?>()
             }
             for (i in input) {
-                buckets[divBcs(i, bucketsort)]!!
+                buckets[divBcs(i, bucketsort)]//?.add(i as Nothing)
             } //java.lang.IndexOutOfBoundsException : Invalid array index: 80 -- a cada valor verificado
+
             for (bucket in buckets) {
                 intArrayOf().sort()
             }
+
             var posicao = 0
             for (n in buckets.indices) {
                 for (v in buckets[n]!!) {
@@ -38,5 +40,4 @@ class BucketSort {
             return (i.toDouble() / bucketsort[0] * (bucketsort[1] - 1)).toInt()
         }
     }
-
 }
