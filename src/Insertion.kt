@@ -6,7 +6,7 @@ class Insertion {
     var bucketSort = BucketSort()
 
     companion object {
-        //private val input: IntArray = TODO()
+        lateinit var input: IntArray
 
         @JvmStatic
         fun main(args: Array<String>) {
@@ -15,7 +15,7 @@ class Insertion {
             println("Entrada de dados desordenados")
             println(Arrays.toString(input))
 
-            //insertionSort(input)
+            insertionSort(input)
 
             println("Saida dos dados ordenado")
             println(Arrays.toString(BucketSort.bucketSort(input)))

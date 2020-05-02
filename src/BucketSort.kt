@@ -1,6 +1,5 @@
 import kotlin.collections.ArrayList
 import kotlin.collections.*
-import kotlin.intArrayOf as kotlinIntArrayOf
 
 class BucketSort {
     object BucketSort {
@@ -14,7 +13,7 @@ class BucketSort {
                 buckets[divBcs(i, bucketsort)]!!
             } //java.lang.IndexOutOfBoundsException : Invalid array index: 80 -- a cada valor verificado
             for (bucket in buckets) {
-                kotlinIntArrayOf().sort(bucket)
+                intArrayOf().sort()
             }
             var posicao = 0
             for (n in buckets.indices) {
@@ -32,16 +31,12 @@ class BucketSort {
                     m = input[i]
                 }
             }
-            return kotlinIntArrayOf(m, Math.sqrt(input.size.toDouble()).toInt())
+            return intArrayOf(m, Math.sqrt(input.size.toDouble()).toInt())
         }
 
         private fun divBcs(i: Int, bucketsort: IntArray): Int {
             return (i.toDouble() / bucketsort[0] * (bucketsort[1] - 1)).toInt()
         }
     }
-
-}
-
-private fun IntArray.sort(fromIndex: MutableList<*>?) {
 
 }
