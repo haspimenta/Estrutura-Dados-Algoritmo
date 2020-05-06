@@ -1,3 +1,4 @@
+
 import BucketSort.BucketSort
 import java.util.*
 import kotlin.Array
@@ -15,7 +16,7 @@ class Insertion {
             println("Entrada de dados desordenados")
             println(Arrays.toString(input))
 
-            insertionSort(input)
+            //insertionSort(input)
 
             println("Saida dos dados ordenado")
             println(Arrays.toString(BucketSort.bucketSort(input)))
@@ -23,7 +24,7 @@ class Insertion {
 
         //verifica o tamanho da entrada
         private fun insertionSort(input: IntArray) {
-            for (i in 1 until input.size) {
+            for (i in 0 until input.size) {
                 val aux = input[i]
                 BucketSort.bucketSort(input)
             }
