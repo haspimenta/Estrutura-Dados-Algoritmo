@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="51bb9e39-2c37-414a-b599-23120a8f5b58" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BucketSort.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/BucketSort.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BucketSort.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/BucketMain.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +44,7 @@
       <recent name="C:\Users\hgals\OneDrive\Documentos\GitHub\EDA\img" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.Main">
+  <component name="RunManager" selected="Kotlin.BucketMain">
     <configuration name="BucketSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BucketSort" />
       <module name="BucketSort" />
@@ -55,6 +55,19 @@
     <configuration name="Insertion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Insertion" />
       <module name="BucketSort" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BucketMain" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="BucketSort" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="BucketMain" />
+      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -74,6 +87,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.BucketMain" />
         <item itemvalue="Kotlin.Main" />
         <item itemvalue="Application.Insertion" />
         <item itemvalue="Application.BucketSort" />
@@ -98,10 +112,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="25" key="#Inspections/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588529854231" />
-    <state x="275" y="0" width="816" height="728" key="#Intentions" timestamp="1588955887711">
+    <state x="275" y="0" width="816" height="728" key="#Intentions" timestamp="1588964057862">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="0" width="816" height="728" key="#Intentions/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588955887711" />
+    <state x="275" y="0" width="816" height="728" key="#Intentions/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588964057862" />
     <state x="1641" y="0" key="#Intentions/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1588893699153" />
     <state x="1779" y="122" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1588890045976">
       <screen x="1366" y="0" width="1366" height="728" />
@@ -123,25 +137,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="486" y="122" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588523099210" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1588954994513">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1588963939510">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588954994513" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588963939510" />
     <state width="1323" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1588893467917" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1588954994512">
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1588963939509">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588954994512" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588963939509" />
     <state width="1323" height="223" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1588893467917" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1588954994512">
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1588963939509">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588954994512" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588963939509" />
     <state width="1323" height="223" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1588893467916" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1588954994513">
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1588963939509">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588954994513" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588963939509" />
     <state width="1323" height="223" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1588893467917" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1588949292453">
       <screen x="0" y="0" width="1366" height="728" />
@@ -195,26 +209,13 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/Main.kt</url>
-          <line>22</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-function">
-          <url>file://$PROJECT_DIR$/src/BucketSort.kt</url>
-          <line>7</line>
-          <properties class="BucketSort.BucketSort" method="bucketSort">
+          <url>file://$PROJECT_DIR$/src/BucketMain.kt</url>
+          <line>85</line>
+          <properties class="BucketSort.BucketSort">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-function">
-          <url>file://$PROJECT_DIR$/src/Main.kt</url>
-          <line>18</line>
-          <properties class="Main.Companion" method="input">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
