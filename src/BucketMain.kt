@@ -5,7 +5,8 @@ nº 18544
 
 import org.opencv.core.Core
 import org.opencv.imgcodecs.Imgcodecs
-import java.util.ArrayList
+import java.util.*
+import kotlin.collections.ArrayList
 
 object BucketMain {
     @JvmStatic
@@ -31,12 +32,14 @@ object BucketMain {
         return values
     }
 
-    private fun BucketSort(toSort: ArrayList<Int>, nBuckets: Int): Array<ArrayList<*>?> {
+    private fun BucketSort(toSort: ArrayList<Int>, nBuckets: Int): ArrayList<ArrayList<Int>> {
 
         //iniciar buckets
-        val buckets: Array<ArrayList<*>?> = arrayOfNulls(nBuckets)
-        for (i in buckets.indices) {
-            buckets[i] = ArrayList<Double>()
+        val buckets = ArrayList<ArrayList<Int>>()
+
+        for (i in 0 until nBuckets)
+        {
+            buckets.add(ArrayList<Int>())
         }
 
         //encontrar o valor máximo do array para ordenar
@@ -50,13 +53,14 @@ object BucketMain {
         //distribuir itens pelos buckets
         for (i in toSort.indices) {
             val nBucketDest = Math.floor(toSort[i] / (max + 1.0) * nBuckets).toInt()
-            buckets[nBucketDest].add(toSort[i])
+            buckets.get(nBucketDest).add(toSort[i])
         }
 
         //aplicar algoritmo insertion sort a cada bucket
         for (i in buckets.indices) {
             InsertionSort(buckets[i] as ArrayList<Int>)
         }
+
         return buckets
     }
 
@@ -72,9 +76,9 @@ object BucketMain {
         }
     }
 
-    private fun PrintBuckets(buckets: Array<ArrayList<*>?>) {
+    private fun PrintBuckets(buckets: ArrayList<ArrayList<Int>>) {
         for (i in buckets.indices) {
-//            System.out.println("bucket " + i + ": " + Arrays.toString(buckets[i].toArray())); //imprive valores dentro dos buckets
+            println("bucket " + i + ": " + Arrays.toString(buckets[i].toArray())); //imprive valores dentro dos buckets
             println("bucket " + i + ": " + buckets[i]!!.size) //imprime tamanho dos buckets
         }
     }
