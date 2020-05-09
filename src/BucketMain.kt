@@ -58,7 +58,7 @@ object BucketMain {
 
         //aplicar algoritmo insertion sort a cada bucket
         for (i in buckets.indices) {
-            InsertionSort(buckets[i] as ArrayList<Int>)
+            InsertionSort(buckets[i]) //as ArrayList<Int>)
         }
 
         return buckets
@@ -79,7 +79,7 @@ object BucketMain {
     private fun PrintBuckets(buckets: ArrayList<ArrayList<Int>>) {
         for (i in buckets.indices) {
             println("bucket " + i + ": " + Arrays.toString(buckets[i].toArray())); //imprive valores dentro dos buckets
-            println("bucket " + i + ": " + buckets[i]!!.size) //imprime tamanho dos buckets
+            println("bucket " + i + ": " + buckets[i].size) //imprime tamanho dos buckets
         }
     }
 }
