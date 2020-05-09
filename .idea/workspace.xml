@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51bb9e39-2c37-414a-b599-23120a8f5b58" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Hello.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/app1.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/teste.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parte1.md.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parte2.md.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parte1.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parte2.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hello.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app1.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BucketMain.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/BucketMain.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teste.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/parte1.md.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/parte2.md.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +23,7 @@
       <list>
         <option value="Class" />
         <option value="Kotlin Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -42,6 +39,7 @@
     <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pdfs" />

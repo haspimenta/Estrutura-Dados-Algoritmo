@@ -27,7 +27,6 @@ Para efeteuar o insertion usei um conjunto de dados que contém mais de 2 milhõ
 de números inteiros aleatórios que serão criados conforme a imagem escolhida com intervalo de 1 a 2.073.600,
 que corresponde a uma imagem com resolução 1920x1080.
 Cada bucket irá receber os valores conforme a troca e execução de n e j para o temp sendo guardados no bucket.
-
 /*
  private fun InsertionSort(bucket: ArrayList<Int>)
     {
@@ -68,10 +67,12 @@ Referências e materiais de pesquisa:
 
 Usando o Markdown
 https://blog.da2k.com.br/2015/02/08/aprenda-markdown/
+notepad++
 
 Algoritmos de estrutura Bucket e Insertion Sort
-Matearial disponibilizado pelo professor 
+Material disponibilizado pelo professor 
 Wikipedia com pseudo-código
+https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/to-int-array.html
 
 Verificando a estrutura e pixels/histogram da imagem
 https://www.dcode.fr/image-histogram?fbclid=IwAR0dYbtXDky_pHS9vulIfmqz1EJCeCNT37tWIX1d3sl1wB_hZfmeG02VwGc
