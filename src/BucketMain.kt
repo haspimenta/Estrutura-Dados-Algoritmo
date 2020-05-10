@@ -20,11 +20,10 @@ object BucketMain
     fun main(args: Array<String>)
     {
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME)
-        println("EDA - Bucket-Sort")
-
+        println("EDA - Bucket-Sort\n")
 
         //Testar algoritmo Bucket Sort com amostras de tamanho incrementado
-        BucketMain.TestBucketSort(N_SAMPLES, DEFAULT_SAMPLE_SIZE)
+        TestBucketSort(N_SAMPLES, DEFAULT_SAMPLE_SIZE)
 
         val toSort = GetPixelValues("img/wallpapers.jpg") //obter o valor 0-255 dos pixeis (brightness)
         //val toSort = GetPixelValues("img/Colored-Grayscale.png") //obter o valor 0-255 dos pixeis (brightness)
@@ -33,6 +32,7 @@ object BucketMain
         PrintBuckets(buckets) //imprimir resultado (test)
     }
 
+    //criar um array random para gerar valores, testando até o numero de amostras para taxa de crescimento
     private fun TestBucketSort(nSamples: Int, nSampleSize: Int)
     {
         try
@@ -55,8 +55,8 @@ object BucketMain
                 val endTime = System.currentTimeMillis()
                 val elapsedTime = endTime - startTime
 
-                println("Amostra com " + testSort.size + "  valores - tempo: " + elapsedTime + " ms")
-                writer.print("""[${testSort.size} : $elapsedTime]""")
+                //println("Amostra com " + testSort.size + "  valores - tempo: " + elapsedTime + " ms")
+                writer.print("[${testSort.size} : $elapsedTime]\n")
                 writer.close()
             }
         }
@@ -82,6 +82,7 @@ object BucketMain
         }
         return values
     }
+
     //iniciando o algoritmo bucketsort com os devidos passos
     private fun BucketSort(toSort: ArrayList<Int>, nBuckets: Int): ArrayList<ArrayList<Int>>
     {
@@ -91,6 +92,7 @@ object BucketMain
         {
             buckets.add(ArrayList<Int>())
         }
+
         //encontrar o valor máximo do array para ordenar
         var max = 0
         for (i in toSort.indices)
@@ -100,12 +102,14 @@ object BucketMain
                 max = toSort[i]
             }
         }
+
         //distribuir itens pelos buckets
         for (i in toSort.indices)
         {
             val nBucketDest = Math.floor(toSort[i] / (max + 1.0) * nBuckets).toInt()
             buckets.get(nBucketDest).add(toSort[i])
         }
+
         //aplicar algoritmo insertion sort a cada bucket
         for (i in buckets.indices)
         {
@@ -113,6 +117,7 @@ object BucketMain
         }
         return buckets
     }
+
     //aplicando o insertion a cada bucket com a sua devida ordenação
     private fun InsertionSort(bucket: ArrayList<Int>)
     {
@@ -128,13 +133,25 @@ object BucketMain
             bucket[j] = temp
         }
     }
+
     //imprimindo os resultados obtidos
     private fun PrintBuckets(buckets: ArrayList<ArrayList<Int>>)
     {
-        for (i in buckets.indices)
+        try
         {
-            println("bucket " + i + ": " + Arrays.toString(buckets[i].toArray())); //imprive valores dentro dos buckets
-            println("bucket " + i + ": " + buckets[i].size) //imprime tamanho dos buckets
+            val writer = PrintWriter("docs/Histogram.txt", "UTF-8")
+            for (i in buckets.indices)
+            {
+                //println("bucket $i: " + Arrays.toString(buckets[i].toTypedArray())) //imprime valores dentro dos buckets
+                println("bucket " + i + ": " + buckets[i].size) //imprime tamanho dos buckets
+                writer.print("[$i : ${buckets[i].size}]\n") //Balde : Tamanho
+            }
+            writer.close()
+        }
+        catch (e: IOException)
+        {
+            print("Não foi possivel criar o arquivo")
+            e.printStackTrace()
         }
     }
 }
