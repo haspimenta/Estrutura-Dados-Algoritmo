@@ -5,8 +5,10 @@ nº 18544
 
 import org.opencv.core.Core
 import org.opencv.imgcodecs.Imgcodecs
+import java.io.FileNotFoundException
 import java.io.IOException
 import java.io.PrintWriter
+import java.io.UnsupportedEncodingException
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -17,14 +19,16 @@ object BucketMain
     private const val DEFAULT_SAMPLE_SIZE = 1000 //tamanho standard da amostra (incrimentada a cada iteração)
 
     @JvmStatic
+    @Throws(InterruptedException::class, IOException::class)
     fun main(args: Array<String>)
     {
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME)
         println("EDA - Bucket-Sort\n")
 
-        //Testar algoritmo Bucket Sort com amostras de tamanho incrementado
-        TestBucketSort(N_SAMPLES, DEFAULT_SAMPLE_SIZE)
+        //Testar algoritmo Bucket Sort com amostras de tamanho incrementado com arrayrandom
+        //TestBucketSort(N_SAMPLES, DEFAULT_SAMPLE_SIZE)
 
+        //temos duas imagens como modelo de entrada, para testar, basta comentar uma e descomentar a outra.
         val toSort = GetPixelValues("img/wallpapers.jpg") //obter o valor 0-255 dos pixeis (brightness)
         //val toSort = GetPixelValues("img/Colored-Grayscale.png") //obter o valor 0-255 dos pixeis (brightness)
 
@@ -33,10 +37,9 @@ object BucketMain
     }
 
     //criar um array random para gerar valores, testando até o numero de amostras para taxa de crescimento
-    private fun TestBucketSort(nSamples: Int, nSampleSize: Int)
+    @Throws(FileNotFoundException::class, UnsupportedEncodingException::class)
+    private fun TestBucketSort(nSamples: Int, nSampleSize: Int): Unit
     {
-        try
-        {
             val writer = PrintWriter("docs/TaxaCrescimento.txt", "UTF-8")
 
             for (i in 0 until nSamples)
@@ -50,21 +53,15 @@ object BucketMain
                 }
 
                 val startTime = System.currentTimeMillis()
-                BucketSort(testSort, N_BUCKETS)
+                BucketSort(testSort, nSampleSize)
 
                 val endTime = System.currentTimeMillis()
                 val elapsedTime = endTime - startTime
 
-                //println("Amostra com " + testSort.size + "  valores - tempo: " + elapsedTime + " ms")
-                writer.print("[${testSort.size} : $elapsedTime]\n")
-                writer.close()
+                println("Amostra com " + testSort.size + "  valores - tempo: " + elapsedTime + " ms")
+                writer.print("${testSort.size} $elapsedTime\n")
             }
-        }
-        catch (e: IOException)
-        {
-            print("Não foi possivel criar o arquivo")
-            e.printStackTrace()
-        }
+        writer.close()
     }
 
     //criando a array de pixels da imagem inserida, através de linhas e colunas
@@ -135,23 +132,16 @@ object BucketMain
     }
 
     //imprimindo os resultados obtidos
-    private fun PrintBuckets(buckets: ArrayList<ArrayList<Int>>)
+    @Throws(IOException::class)
+    private fun PrintBuckets(buckets: ArrayList<ArrayList<Int>>): Unit
     {
-        try
-        {
             val writer = PrintWriter("docs/Histogram.txt", "UTF-8")
             for (i in buckets.indices)
             {
                 //println("bucket $i: " + Arrays.toString(buckets[i].toTypedArray())) //imprime valores dentro dos buckets
                 println("bucket " + i + ": " + buckets[i].size) //imprime tamanho dos buckets
-                writer.print("[$i : ${buckets[i].size}]\n") //Balde : Tamanho
+                writer.print("$i ${buckets[i].size}\n") //Balde : Tamanho
             }
             writer.close()
-        }
-        catch (e: IOException)
-        {
-            print("Não foi possivel criar o arquivo")
-            e.printStackTrace()
-        }
     }
 }
