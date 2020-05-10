@@ -5,21 +5,66 @@ nº 18544
 
 import org.opencv.core.Core
 import org.opencv.imgcodecs.Imgcodecs
+import java.io.IOException
+import java.io.PrintWriter
 import java.util.*
 import kotlin.collections.ArrayList
 
 object BucketMain
 {
+    private const val N_BUCKETS = 100 //numero de buckets
+    private const val N_SAMPLES = 100 //numero de amostras
+    private const val DEFAULT_SAMPLE_SIZE = 1000 //tamanho standard da amostra (incrimentada a cada iteração)
+
     @JvmStatic
     fun main(args: Array<String>)
     {
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME)
         println("EDA - Bucket-Sort")
-        val N_BUCKETS = 100 //numero de buckets
+
+
+        //Testar algoritmo Bucket Sort com amostras de tamanho incrementado
+        BucketMain.TestBucketSort(N_SAMPLES, DEFAULT_SAMPLE_SIZE)
+
         val toSort = GetPixelValues("img/wallpapers.jpg") //obter o valor 0-255 dos pixeis (brightness)
         //val toSort = GetPixelValues("img/Colored-Grayscale.png") //obter o valor 0-255 dos pixeis (brightness)
+
         val buckets = BucketSort(toSort, N_BUCKETS) //ordernar os valores em buckets
         PrintBuckets(buckets) //imprimir resultado (test)
+    }
+
+    private fun TestBucketSort(nSamples: Int, nSampleSize: Int)
+    {
+        try
+        {
+            val writer = PrintWriter("docs/TaxaCrescimento.txt", "UTF-8")
+
+            for (i in 0 until nSamples)
+            {
+                val testSort = java.util.ArrayList<Int>()
+                val sampleSize = nSampleSize * (i + 1)
+
+                for (x in 0 until sampleSize)
+                {
+                    testSort.add(Random().nextInt(255))
+                }
+
+                val startTime = System.currentTimeMillis()
+                BucketSort(testSort, N_BUCKETS)
+
+                val endTime = System.currentTimeMillis()
+                val elapsedTime = endTime - startTime
+
+                println("Amostra com " + testSort.size + "  valores - tempo: " + elapsedTime + " ms")
+                writer.print("""[${testSort.size} : $elapsedTime]""")
+                writer.close()
+            }
+        }
+        catch (e: IOException)
+        {
+            print("Não foi possivel criar o arquivo")
+            e.printStackTrace()
+        }
     }
 
     //criando a array de pixels da imagem inserida, através de linhas e colunas

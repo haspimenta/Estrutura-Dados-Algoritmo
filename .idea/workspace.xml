@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51bb9e39-2c37-414a-b599-23120a8f5b58" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parte1.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parte2.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/parte1.md.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/parte2.md.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Hello.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/app1.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/parte1.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/parte1.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parte2.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/parte2.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BucketMain.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/BucketMain.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,12 +48,13 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\hgals\OneDrive\Documentos\GitHub\EDA\pdfs" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\hgals\OneDrive\Documentos\GitHub\EDA\pdfs" />
       <recent name="C:\Users\hgals\OneDrive\Documentos\GitHub\EDA\img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hgals\OneDrive\Documentos\GitHub\EDA\docs" />
+      <recent name="C:\Users\hgals\OneDrive\Documentos\GitHub\EDA\pdfs" />
     </key>
   </component>
   <component name="RunManager" selected="Kotlin.BucketMain">
@@ -125,7 +125,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -166,45 +168,45 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="486" y="122" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588523099210" />
-    <state width="661" height="223" key="GridCell.Tab.0.bottom" timestamp="1588992973983">
+    <state width="661" height="223" key="GridCell.Tab.0.bottom" timestamp="1589064573978">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="661" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588992973983" />
+    <state width="661" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1589064573978" />
     <state width="1323" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1588893467917" />
-    <state width="661" height="223" key="GridCell.Tab.0.center" timestamp="1588992973983">
+    <state width="661" height="223" key="GridCell.Tab.0.center" timestamp="1589064573978">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="661" height="223" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588992973983" />
+    <state width="661" height="223" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1589064573978" />
     <state width="1323" height="223" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1588893467917" />
-    <state width="661" height="223" key="GridCell.Tab.0.left" timestamp="1588992973983">
+    <state width="661" height="223" key="GridCell.Tab.0.left" timestamp="1589064573977">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="661" height="223" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588992973983" />
+    <state width="661" height="223" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1589064573977" />
     <state width="1323" height="223" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1588893467916" />
-    <state width="661" height="223" key="GridCell.Tab.0.right" timestamp="1588992973983">
+    <state width="661" height="223" key="GridCell.Tab.0.right" timestamp="1589064573978">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="661" height="223" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588992973983" />
+    <state width="661" height="223" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1589064573978" />
     <state width="1323" height="223" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1588893467917" />
-    <state width="661" height="223" key="GridCell.Tab.1.bottom" timestamp="1588992973984">
+    <state width="661" height="223" key="GridCell.Tab.1.bottom" timestamp="1589064573979">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="661" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588992973984" />
+    <state width="661" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1589064573979" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1588893467660" />
-    <state width="661" height="223" key="GridCell.Tab.1.center" timestamp="1588992973984">
+    <state width="661" height="223" key="GridCell.Tab.1.center" timestamp="1589064573979">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="661" height="223" key="GridCell.Tab.1.center/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588992973984" />
+    <state width="661" height="223" key="GridCell.Tab.1.center/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1589064573979" />
     <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1588893467660" />
-    <state width="661" height="223" key="GridCell.Tab.1.left" timestamp="1588992973984">
+    <state width="661" height="223" key="GridCell.Tab.1.left" timestamp="1589064573979">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="661" height="223" key="GridCell.Tab.1.left/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588992973984" />
+    <state width="661" height="223" key="GridCell.Tab.1.left/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1589064573979" />
     <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1588893467660" />
-    <state width="661" height="223" key="GridCell.Tab.1.right" timestamp="1588992973984">
+    <state width="661" height="223" key="GridCell.Tab.1.right" timestamp="1589064573979">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="661" height="223" key="GridCell.Tab.1.right/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588992973984" />
+    <state width="661" height="223" key="GridCell.Tab.1.right/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1589064573979" />
     <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1588893467660" />
     <state x="350" y="69" key="NewModule_or_Project.wizard" timestamp="1588510914379">
       <screen x="0" y="0" width="1366" height="728" />
@@ -240,8 +242,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-function">
           <url>file://$PROJECT_DIR$/src/BucketMain.kt</url>
-          <line>85</line>
-          <properties class="BucketSort.BucketSort">
+          <line>130</line>
+          <properties class="BucketMain" method="PrintBuckets">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="4" />
