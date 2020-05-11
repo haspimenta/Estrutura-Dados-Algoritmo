@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51bb9e39-2c37-414a-b599-23120a8f5b58" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pdfs/Histograma.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pdfs/TaxaCrescimentoBucketSort.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/gitIntelliJ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ArvorePesquisaBinaria.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ArvoreRubroNegro.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MainRubroNegro.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Memoria.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pilha.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Histogram.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Histogram.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/TaxaCrescimento.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/TaxaCrescimento.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/parte1.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/parte1.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teste.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BucketMain.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/BucketMain.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/parte2.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/parte2.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +23,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
+        <option value="Kotlin File" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -55,11 +57,12 @@
       <recent name="C:\Users\hgals\OneDrive\Documentos\GitHub\EDA\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hgals\OneDrive\Documentos\GitHub\EDA\img" />
       <recent name="C:\Users\hgals\OneDrive\Documentos\GitHub\EDA\docs" />
       <recent name="C:\Users\hgals\OneDrive\Documentos\GitHub\EDA\pdfs" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.BucketMain">
+  <component name="RunManager" selected="Kotlin.MainRubroNegro">
     <configuration name="BucketSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BucketSort" />
       <module name="BucketSort" />
@@ -100,8 +103,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MainRubroNegro" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="BucketSort" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="MainRubroNegro" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.MainRubroNegro" />
         <item itemvalue="Kotlin.BucketMain" />
         <item itemvalue="Kotlin.Main" />
         <item itemvalue="Application.Insertion" />
@@ -170,26 +187,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="486" y="122" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588523099210" />
-    <state width="661" height="179" key="GridCell.Tab.0.bottom" timestamp="1589141640333">
+    <state width="661" height="179" key="GridCell.Tab.0.bottom" timestamp="1589233521138">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="661" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1589141640333" />
-    <state width="1323" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1588893467917" />
-    <state width="661" height="179" key="GridCell.Tab.0.center" timestamp="1589141640332">
+    <state width="661" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1589233521138" />
+    <state width="661" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1589156135930" />
+    <state width="661" height="179" key="GridCell.Tab.0.center" timestamp="1589233521138">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="661" height="179" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1589141640332" />
-    <state width="1323" height="223" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1588893467917" />
-    <state width="661" height="179" key="GridCell.Tab.0.left" timestamp="1589141640323">
+    <state width="661" height="179" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1589233521138" />
+    <state width="661" height="179" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1589156135930" />
+    <state width="661" height="179" key="GridCell.Tab.0.left" timestamp="1589233521137">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="661" height="179" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1589141640323" />
-    <state width="1323" height="223" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1588893467916" />
-    <state width="661" height="179" key="GridCell.Tab.0.right" timestamp="1589141640332">
+    <state width="661" height="179" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1589233521137" />
+    <state width="661" height="179" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1589156135930" />
+    <state width="661" height="179" key="GridCell.Tab.0.right" timestamp="1589233521138">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="661" height="179" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1589141640332" />
-    <state width="1323" height="223" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1588893467917" />
+    <state width="661" height="179" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1589233521138" />
+    <state width="661" height="179" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1589156135930" />
     <state width="661" height="223" key="GridCell.Tab.1.bottom" timestamp="1589064573979">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -226,14 +243,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="70" y="0" key="new project wizard/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588510758158" />
-    <state x="424" y="12" key="refactoring.ChangeSignatureDialog" timestamp="1588895650315">
+    <state x="424" y="12" key="refactoring.ChangeSignatureDialog" timestamp="1589232144021">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="424" y="12" key="refactoring.ChangeSignatureDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588895650315" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1588541039629">
+    <state x="424" y="12" key="refactoring.ChangeSignatureDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1589232144021" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1589232340766">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588541039629" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1589232340766" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1588280297964">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

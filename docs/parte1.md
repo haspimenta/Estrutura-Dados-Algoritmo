@@ -97,9 +97,27 @@ residir numa pasta designada por pdfs.
 
 O material de pesquisa serve como apoio ao conteúdo ministrado em videos aulas, conforme disciplina, tendo em vista as videos aulas, material de apoio da disciplina, referênciamos todos os portais de leitura e consulta para realização do trabalho acadêmico, como forma de demonstrar as bases de aopio para aplicação do conhecimento adquirido.
 
-| Plugin | README |
+| Ferramentas | README |
 | ------ | ------ |
 | Usando o Markdown | [https://blog.da2k.com.br/2015/02/08/aprenda-markdown/][https://docs.pipz.com/central-de-ajuda/learning-center/guia-basico-de-markdown#open] |
 | Usando o Gnuplot | [https://label2.tecnico.ulisboa.pt/IC/HowTo/HowTo_GnuPlot.php][https://blog.pantuza.com/tutoriais/como-criar-histogramas-com-gnu-plot] |
-| Bucket e Insertion Sort | [Material disponibilizado pelo professor][Wikipedia com pseudo-código] [https://www.guj.com.br/search?q=bucketsort][https://www.guj.com.br/search?q=insertionsort][https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/to-int-array.html][https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/BitSet.html#valueOf(byte[])]|
-| Verificando a estrutura e pixels/histogram da imagem | [https://www.dcode.fr/image-histogram?fbclid=IwAR0dYbtXDky_pHS9vulIfmqz1EJCeCNT37tWIX1d3sl1wB_hZfmeG02VwGc][PlOd] |
+| Bucket e Insertion Sort | [Material disponibilizado pelo professor][Wikipedia com pseudo-código] [https://www.guj.com.br/search?q=bucketsort][https://www.guj.com.br/search?q=insertionsort][https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/to-int-array.html][https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/BitSet.html#valueOf(byte)]|
+| Verificando a estrutura e pixels/histogram da imagem | [https://www.dcode.fr/image-histogram?fbclid=IwAR0dYbtXDky_pHS9vulIfmqz1EJCeCNT37tWIX1d3sl1wB_hZfmeG02VwGc] |
+| Usando o Git e GitHub | [https://www.youtube.com/watch?v=xEKo29OWILE&list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA&index=1]|
+
+
+### Controle de versão
+
+  - Fundamental para a gestão sadia e profissional de todo e qualquer trabalho hoje na área de infomática, o controle de versões é extremamente utilizado e existem inumeras ferramentas disponiveis para o uso.
+  Neste caso utilizaremos a ferramenta Git e adicionando de forma extra uso o GitHub para complemento de gestão de versões
+  Acesso ao repositório através do link abaixo, poderá demonstrar todas as implementações ocorridas.
+  Dentro dessa gestão, foi configurado inclusive o IntelliJ a ferramenta para programação, o uso do git, conforme tela. 
+
+ 
+    [img\gitIntellij.png]
+
+```sh
+Poderá clicar no link abaixo para ser direcionado ao repositório do GitHub
+https://github.com/haspimenta/EDA-Trabalho-2020
+```
+Clique aqui [Acesso ao GitHub direto](https://github.com/haspimenta/EDA-Trabalho-2020)
