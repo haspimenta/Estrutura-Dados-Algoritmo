@@ -38,71 +38,91 @@ mínima e de pesquisa de caminhos mais curtos;
 
 # Código
 
-  - Importante salientar o código para uso:
-    - Algumas partes estarão comentadas, mas não é por questoes de erro e sim por questões de uso.
-    Temos duas partes importantes nessa sequência do BucketSort, a primeira é uma execução com o arrayrandom, numeros aleatorios com a funcionalidade de testar a execução e a taxa de crescimento do mesmo. A segunda parte, temos a entrada de dados, valores, através de imagens "coloquei duas imagens para uso", com essas imagens vamos gerar um arraylist com mais de 2 milhoes de valores, por isso a importância de comentar a parte que vai usar no momento para não executar ambas.
-    Todo o código foi divido em funções ou metodos, separados, buscando aplicar a melhor prática de programação e dentro dos meus campos de conhecimento e pesquisa.
-    - Todo o código esta devidamente comentado, com o descritivo para que serve cada função e ações especificas.
-
+  - O código estrutural foi retirado do conteúdo acadêmico ministrado pelo professor Jasnau Caeiro, em seu guia de aula
+  diponibilizado para os alunos.
+  O bjetivo dessa parte dois é programar a estrutura de dados designada por árvore de pesquisa binária balanceada
+  red-black leccionada na disciplina, realizada uma aplicação que pegue num texto e que coloque na árvore de
+  pesquisa binária cada uma das palavras. Deve usar-se uma função de comparação de string existente na biblioteca 
+  padrão da linguagem de programação Kotlin.
+  
+  - Como comparação de string utilizei o ("else if (m!!.key!!.get(z)!!.compareTo(m!!.key!!.get(y).toString()) < 0) //compara ordem lexicográfical"),
+  CompareTo, conforme demonstrado nessa linha de código, demais programação necessarias para o reconhecimento do algoritmo para 
+  strings também foram realizadas e é estão comentadas no decorrer do código.
+  
+  -Ponto importante de uso no codigo foi a ação "lexicográfical", a ordenação das palavras conforme sua escrita, até então
+  desconhecida da minha parte, porém que ajuda demasiado no entendimento para o balanceamento da árvore.
+  EX:
+  ```sh
+  Texto em ordem lexicográfica
+  [de, especial, rubro-negra, tipo, um, uma, árvore, árvore, é]
+  ```
+  Em matemática, uma ordem lexicográfica, (também conhecida como ordem do dicionário, ordem alfabética ), é uma 
+  estrutura de ordem natural do produto cartesiano de dois conjuntos ordenados.
+  Dadas dois conjuntos parcialmente ordenados A e B, a ordem lexicográfica sobre o produto cartesiano A x B é 
+  definida como (a,b) ≤ (a′,b′) se e somente se a < a′ ou (a = a′ e b ≤ b′).
+  O resultado é uma ordem parcial. Se A e B são totalmente ordenados, então o resultado é uma ordem total também.
+                                                                                            citação(wikipedia)
+                                                                                                                                                                               
+ ```sh                                                                                          
+  8-> [p = nil, key = uma, left = 6, right = 7]
+  7-> [p = 8, key = árvore, left = nil, right = 5]
+  6-> [p = 4, key = rubro-negra, left = 3, right = nil]
+  5-> [p = 7, key = é, left = nil, right = nil]
+  4-> [p = 8, key = um, left = 6, right = nil]
+  3-> [p = 4, key = tipo, left = 2, right = 4]
+  2-> [p = 3, key = especial, left = 1, right = nil]
+  1-> [p = 2, key = de, left = nil, right = nil]
+  0-> [p = 5, key = árvore, left = nil, right = nil]
+ ```  
+  - Sendo assim se analisar a árvore acima veremos que os textos de acordo com a questão
+  lexicográfica, bate corretamente, intercalando as cores e correspondendo os valores maiores
+  pela direto assim como os menores pela esquerda, além claro de respeitar as demais propriedades 
+  do algoritmo da árvore de balanceamento.
+  
 # Especificando algumas partes do código
 
-  - Nesta função o objetivo é criar o arraylist de pixels da imagem utilizada, fazendo um for para linhas e colunas, para não estourar o tamanho do array na condição subtraimos 1, mas poderá também ser inicialuizado a contagem em 1,em vez de 0, mas para isso devemos estar atentos a estrutura usada em todo código para não perdermos dados e obter erro de estrutura durante o processo.
- 
+  - Nesta chamada dividimos o conteúdo da string de forma a armazenada em uma array
+  para que através da ordenação possamos determinar a sequência logica do program, partindo do principio que 
+  testei em varios array de menores elementos, passiveis de uma analise visual e de desenho em caderno para
+  o devido entendimento e confirmação dos dados.
+  
 ```sh
-private fun GetPixelValues(path: String): ArrayList<Int>
- {
-        val img = Imgcodecs.imread(path, Imgcodecs.IMREAD_GRAYSCALE) //FULL HD 1920*1080
-        val values = ArrayList<Int>()
-        for (r in 0 until img.rows() - 1) {
-            for (c in 0 until img.cols() - 1) {
-               val temp = img[r, c]
-                values.add(temp[0].toInt())
-            }
-        }
-        return values
-    }
-``` 
-  - Para efeteuar o insertion usei um conjunto de dados que contém mais de 2 milhões
-de números inteiros aleatórios que serão criados conforme a imagem escolhida com intervalo de 1 a 2.073.600,
-que corresponde a uma imagem com resolução 1920x1080. Cada bucket irá receber os valores conforme a troca e execução de n e j para o temp sendo guardados no bucket.
-```sh
-    //criando a array de pixels da imagem inserida, através de linhas e colunas
-    private fun GetPixelValues(path: String): ArrayList<Int>
-    {
-        val img = Imgcodecs.imread(path, Imgcodecs.IMREAD_GRAYSCALE) //FULL HD 1920*1080
-        val values = ArrayList<Int>()
-        for (r in 0 until img.rows() - 1)
-        {
-            for (c in 0 until img.cols() - 1)
-            {
-                val temp = img[r, c]
-                values.add(temp[0].toInt())
-            }
-        }
-        return values
-    }
+        val words = text.split("\\s+".toRegex()).toTypedArray()
+        val n = words.size
 
-private fun InsertionSort(bucket: ArrayList<Int>)
-    {
-        for (n in bucket.indices)
-        {
-            var j = n
-            val temp = bucket[n]
-            while (j > 0 && bucket[j - 1] > temp)
-            {
-               bucket[j] = bucket[j - 1]
-                j--
-            }
-            bucket[j] = temp
-        }
-    }
-```
-- A distribuição dos valores nos buckets, ocorre de uma forma concisa, ou seja, para qualquer imagem escolhida o algoritmo deve distribuir de uma forma uniforme os valores entre os buckets. Para isso ao calcular a divisão pretende que seja feito um "arredondamento", por isso a operação com o math.floor, para saber em qual bucket o valor será adicionado. Exemplo: ao dividir 10/4 temos 2,5, como trabalhamos com numeros inteiros de buckets, não podemos ter 2,5 buckets, assim temos que colocar o valor no backet 2. Além é claro que ao definir o numero de array, também controla a situação de não estouramos a estrutura do array, passando o seu numero de posições.
+        //Só para testar ordem lexicográfica das palavras
+        Arrays.sort(words);
+``` 
+  - Como não sabemos o tamanho do array ou nesse caso a quantidae para a variavel key de entrada criei um
+  "for" para que fosse executado um loop para que enquanto houvesse palavras para inserir, fossem as mesmas contabilizadas
+  e adicionadas no array para uso dos dados no código.
+  Podendo acompanhar que sempre busco usar pelo menos 2 (duas) entradas diferentes para confirmação
+  do execução do código.  
+  
 ```sh
-for (i in toSort.indices)
+    //Inserir palavra a palavra na árvore
+            for (i in words.indices)
+            {
+                bs.insert(words[i])
+            }
+            println("AFTER")
+            System.out.println(bs)
+        }
+
+```
+- A função compareTo do Kotlin nos permitir compara esse valor com o valor especificado para o pedido. 
+Retorna zero se esse valor for igual ao outro valor especificado, um número negativo se for menor que outro 
+ou um número positivo se for maior que outro, assim comparamos a string para definir a ordenação, 
+posteriormente dentro do array.
+
+```sh
+else if (m!!.key!!.get(z)!!.compareTo(m!!.key!!.get(y).toString()) < 0) //compara ordem lexicográfical
         {
-            <p>val nBucketDest = Math.floor(toSort[i] / (max + 1.0) * nBuckets).toInt()
-            <p>buckets.get(nBucketDest).add(toSort[i])
+            m!!.left!![y] = z
+        }
+        else
+        {
+            m!!.right!![y] = z
         }
 ```
 Ferramentas de uso:
@@ -129,7 +149,8 @@ O material de pesquisa serve como apoio ao conteúdo ministrado em videos aulas,
 | Bucket e Insertion Sort | [Material disponibilizado pelo professor][Wikipedia com pseudo-código] [https://www.guj.com.br/search?q=bucketsort][https://www.guj.com.br/search?q=insertionsort][https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/to-int-array.html][https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/BitSet.html#valueOf(byte)]|
 | Verificando a estrutura e pixels/histogram da imagem | [https://www.dcode.fr/image-histogram?fbclid=IwAR0dYbtXDky_pHS9vulIfmqz1EJCeCNT37tWIX1d3sl1wB_hZfmeG02VwGc] |
 | Usando o Git e GitHub | [https://www.youtube.com/watch?v=xEKo29OWILE&list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA&index=1]|
-
+| Leitura e pesquisa | [https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/compare-to.html][https://docs.oracle.com/javase/8/docs/api/java/lang/String.html][https://pt.wikipedia.org/wiki/%C3%81rvore_rubro-negra][https://stackoverflow.com/questions/40430297/kotlin-idiomatic-way-to-remove-duplicate-strings-from-array] [https://www.ime.usp.br/~pf/estruturas-de-dados/aulas/st-redblack.html]|
+| Modelo para código | [Guia prático EDA - ESTIG - Professor Jasnau Carneiro]|
 
 ### Controle de versão
 

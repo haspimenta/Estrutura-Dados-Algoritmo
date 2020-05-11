@@ -15,13 +15,17 @@ mínima e de pesquisa de caminhos mais curtos;
 
   - Importante salientar o código para uso:
     - Algumas partes estarão comentadas, mas não é por questoes de erro e sim por questões de uso.
-    Temos duas partes importantes nessa sequência do BucketSort, a primeira é uma execução com o arrayrandom, numeros aleatorios com a funcionalidade de testar a execução e a taxa de crescimento do mesmo. A segunda parte, temos a entrada de dados, valores, através de imagens "coloquei duas imagens para uso", com essas imagens vamos gerar um arraylist com mais de 2 milhoes de valores, por isso a importância de comentar a parte que vai usar no momento para não executar ambas.
+    Temos duas partes importantes nessa sequência do BucketSort, a primeira é uma execução com o arrayrandom, numeros aleatorios com a funcionalidade de testar a execução e a taxa de crescimento do mesmo. 
+    A segunda parte, temos a entrada de dados, valores, através de imagens "coloquei duas imagens para uso", com essas imagens vamos gerar um arraylist com mais de 2 milhoes de valores, por isso a importância 
+    de comentar a parte que vai usar no momento para não executar ambas.
     Todo o código foi divido em funções ou metodos, separados, buscando aplicar a melhor prática de programação e dentro dos meus campos de conhecimento e pesquisa.
     - Todo o código esta devidamente comentado, com o descritivo para que serve cada função e ações especificas.
 
 # Especificando algumas partes do código
 
-  - Nesta função o objetivo é criar o arraylist de pixels da imagem utilizada, fazendo um for para linhas e colunas, para não estourar o tamanho do array na condição subtraimos 1, mas poderá também ser inicialuizado a contagem em 1,em vez de 0, mas para isso devemos estar atentos a estrutura usada em todo código para não perdermos dados e obter erro de estrutura durante o processo.
+  - Nesta função o objetivo é criar o arraylist de pixels da imagem utilizada, fazendo um for para linhas e colunas, para não estourar o tamanho do array na condição subtraimos 1, 
+  mas poderá também ser inicializado a contagem em 1, em vez de 0, mas para isso devemos estar atentos a estrutura usada em todo código para não perdermos dados e obter erro de 
+  estrutura durante o processo.
  
 ```sh
 private fun GetPixelValues(path: String): ArrayList<Int>
@@ -39,7 +43,8 @@ private fun GetPixelValues(path: String): ArrayList<Int>
 ``` 
   - Para efeteuar o insertion usei um conjunto de dados que contém mais de 2 milhões
 de números inteiros aleatórios que serão criados conforme a imagem escolhida com intervalo de 1 a 2.073.600,
-que corresponde a uma imagem com resolução 1920x1080. Cada bucket irá receber os valores conforme a troca e execução de n e j para o temp sendo guardados no bucket.
+que corresponde a uma imagem com resolução 1920x1080. Cada bucket irá receber os valores conforme a troca e 
+execução de n e j para o temp sendo guardados no bucket.
 ```sh
     //criando a array de pixels da imagem inserida, através de linhas e colunas
     private fun GetPixelValues(path: String): ArrayList<Int>
@@ -72,7 +77,12 @@ private fun InsertionSort(bucket: ArrayList<Int>)
         }
     }
 ```
-- A distribuição dos valores nos buckets, ocorre de uma forma concisa, ou seja, para qualquer imagem escolhida o algoritmo deve distribuir de uma forma uniforme os valores entre os buckets. Para isso ao calcular a divisão pretende que seja feito um "arredondamento", por isso a operação com o math.floor, para saber em qual bucket o valor será adicionado. Exemplo: ao dividir 10/4 temos 2,5, como trabalhamos com numeros inteiros de buckets, não podemos ter 2,5 buckets, assim temos que colocar o valor no backet 2. Além é claro que ao definir o numero de array, também controla a situação de não estouramos a estrutura do array, passando o seu numero de posições.
+- A distribuição dos valores nos buckets, ocorre de uma forma concisa, ou seja, para qualquer imagem escolhida o 
+algoritmo deve distribuir de uma forma uniforme os valores entre os buckets. Para isso ao calcular a divisão pretende 
+que seja feito um "arredondamento", por isso a operação com o math.floor, para saber em qual bucket o valor será 
+adicionado. Exemplo: ao dividir 10/4 temos 2,5, como trabalhamos com numeros inteiros de buckets, não podemos 
+ter 2,5 buckets, assim temos que colocar o valor no backet 2. Além é claro que ao definir o numero de array, 
+também controla a situação de não estouramos a estrutura do array, passando o seu numero de posições.
 ```sh
 for (i in toSort.indices)
         {
@@ -86,7 +96,8 @@ Ferramentas de uso:
   -  OpenCV 4.3.0
   -  Notepad++
 
-Na pasta do projeto, contém todos os documentos gerados, durante a execução do trabalho acadêmico, assim no os arquivos gitgnore, README e as estruturas dos ficheiros conforme PDF de apoio.
+Na pasta do projeto, contém todos os documentos gerados, durante a execução do trabalho acadêmico, assim no 
+os arquivos gitgnore, README e as estruturas dos ficheiros conforme PDF de apoio.
 
 > O trabalho deve ser realizado numa pasta designada por EDA-Trabalho-2020. O código
 deve residir numa sub-pasta designada por src e a documentação que fôr produzida
@@ -95,7 +106,9 @@ residir numa pasta designada por pdfs.
 
 ### Referências e materiais de pesquisa
 
-O material de pesquisa serve como apoio ao conteúdo ministrado em videos aulas, conforme disciplina, tendo em vista as videos aulas, material de apoio da disciplina, referênciamos todos os portais de leitura e consulta para realização do trabalho acadêmico, como forma de demonstrar as bases de aopio para aplicação do conhecimento adquirido.
+O material de pesquisa serve como apoio ao conteúdo ministrado em videos aulas, conforme disciplina, tendo em vista 
+as videos aulas, material de apoio da disciplina, referênciamos todos os portais de leitura e consulta para realização 
+do trabalho acadêmico, como forma de demonstrar as bases de aopio para aplicação do conhecimento adquirido.
 
 | Ferramentas | README |
 | ------ | ------ |

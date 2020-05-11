@@ -1,20 +1,27 @@
-open class ArvorePesquisaBinaria(n: Int) {
+open class ArvorePesquisaBinaria(n: Int)
+{
     val n: Unit = Unit
     protected var m: Memoria? = null
     protected val NIL = 0
     protected var root = NIL
     protected var z = 0
-    open fun insert(key: String?) {
+
+    open fun insert(key: String?)
+    {
         z = m!!.allocate_object()
         m!!.key!![z] = key
         var y = NIL
         var x = this.root
-        while (x != NIL) {
+        while (x != NIL)
+        {
             y = x
-            if (m!!.key!!.get(z)!!.compareTo(m!!.key!!.get(x).toString()) < 0) //compare lexycogprahical order
+
+            if (m!!.key!!.get(z)!!.compareTo(m!!.key!!.get(x).toString()) < 0) //compara ordem lexicográfical
             {
                x = m!!.left!!.get(x)
-            } else {
+            }
+            else
+            {
                x = m!!.right!!.get(x)
             }
         }
@@ -23,19 +30,23 @@ open class ArvorePesquisaBinaria(n: Int) {
         {
             this.root = z
         }
-        else if (m!!.key!!.get(z)!!.compareTo(m!!.key!!.get(y).toString()) < 0) //compare lexycogprahical order
+
+        else if (m!!.key!!.get(z)!!.compareTo(m!!.key!!.get(y).toString()) < 0) //compara ordem lexicográfical
         {
             m!!.left!![y] = z
-        } else {
+        }
+        else
+        {
             m!!.right!![y] = z
         }
     }
 
-    override fun toString(): String {
+    override fun toString(): String
+    {
         return m.toString().toString() + "root -> " + if (root == 0) "nil" else root
     }
-
-    init {
+    init
+    {
         m = Memoria(n)
     }
 }
