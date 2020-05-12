@@ -17,7 +17,7 @@ import kotlin.collections.ArrayList
 object BucketMain
 {
     private const val N_BUCKETS = 100 //numero de buckets
-    private const val N_SAMPLES = 100 //numero de amostras
+    private const val N_SAMPLES = 10000 //numero de amostras
     private const val DEFAULT_SAMPLE_SIZE = 1000 //tamanho standard da amostra (incrimentada a cada iteração)
 
     @JvmStatic
@@ -28,7 +28,7 @@ object BucketMain
         println("EDA - Bucket-Sort\n")
 
         //Testar algoritmo Bucket Sort com amostras de tamanho incrementado com arrayrandom
-        //TestBucketSort(N_SAMPLES, DEFAULT_SAMPLE_SIZE)
+        TestBucketSort(N_SAMPLES, DEFAULT_SAMPLE_SIZE)
 
         //temos duas imagens como modelo de entrada, para testar, basta comentar uma e descomentar a outra.
         val toSort = GetPixelValues("img/wallpapers.jpg") //obter o valor 0-255 dos pixeis (brightness)
