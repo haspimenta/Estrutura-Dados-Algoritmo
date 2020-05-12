@@ -17,8 +17,8 @@ import kotlin.collections.ArrayList
 object BucketMain
 {
     private const val N_BUCKETS = 100 //numero de buckets
-    private const val N_SAMPLES = 10000 //numero de amostras
-    private const val DEFAULT_SAMPLE_SIZE = 1000 //tamanho standard da amostra (incrimentada a cada iteração)
+    private const val N_SAMPLES = 1000 //numero de amostras
+    private const val DEFAULT_SAMPLE_SIZE = 10 //tamanho standard da amostra (incrimentada a cada iteração)
 
     @JvmStatic
     @Throws(InterruptedException::class, IOException::class)
