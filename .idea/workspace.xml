@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51bb9e39-2c37-414a-b599-23120a8f5b58" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pdfs/TaxaCrescimento.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/TaxaCrescimento.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/TaxaCrescimento.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BucketMain.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/BucketMain.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +37,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pdfs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -57,7 +54,7 @@
       <recent name="C:\Users\hgals\OneDrive\Documentos\GitHub\EDA\img" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.BucketMain">
+  <component name="RunManager" selected="Kotlin.MainRubroNegro">
     <configuration name="BucketSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BucketSort" />
       <module name="BucketSort" />
@@ -113,8 +110,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.BucketMain" />
         <item itemvalue="Kotlin.MainRubroNegro" />
+        <item itemvalue="Kotlin.BucketMain" />
         <item itemvalue="Kotlin.Main" />
         <item itemvalue="Application.Insertion" />
         <item itemvalue="Application.BucketSort" />
