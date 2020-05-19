@@ -4,8 +4,6 @@ ESTIG - IPBEJA
 Prof: Jasnau Caeiro
 18544@stu.ipbeja.pt
  */
-
-
 import java.io.FileNotFoundException
 import java.util.*
 

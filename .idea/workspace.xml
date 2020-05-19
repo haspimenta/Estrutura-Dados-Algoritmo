@@ -3,6 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="51bb9e39-2c37-414a-b599-23120a8f5b58" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/parte1.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/parte1.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ArvorePesquisaBinaria.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/ArvorePesquisaBinaria.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ArvoreRedBlack.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/ArvoreRedBlack.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainRubroNegro.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainRubroNegro.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Memoria.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Memoria.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pilha.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pilha.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

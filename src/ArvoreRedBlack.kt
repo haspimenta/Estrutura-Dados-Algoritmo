@@ -20,7 +20,6 @@ class ArvoreRedBlack(n: Int) : ArvorePesquisaBinaria(n)
         left!![y] = x
         p!![x] = y
     }
-
     fun right_rotate(x: Int)
     {
         val y = left!![x]
@@ -35,7 +34,6 @@ class ArvoreRedBlack(n: Int) : ArvorePesquisaBinaria(n)
         right!![y] = x
         p!![x] = y
     }
-
     fun insert_fixup(z: Int)
     {
         var z = z
@@ -89,7 +87,6 @@ class ArvoreRedBlack(n: Int) : ArvorePesquisaBinaria(n)
         } /* while */
         color!![root] = BLACK
     }
-
     override fun insert(key: String?)
     {
         super.insert(key)
@@ -98,7 +95,6 @@ class ArvoreRedBlack(n: Int) : ArvorePesquisaBinaria(n)
         println(z)
         insert_fixup(z)
     }
-
     override fun toString(): String
     {
         val s = super.toString()

@@ -6,13 +6,11 @@ class Pilha(var n: Int)
     {
         return if (top == -1) true else false
     }
-
     fun push(x: Int)
     {
         top = top + 1
         S!![top] = x
     }
-
     fun pop(): Int
     {
         return if (stack_empty())
@@ -26,7 +24,6 @@ class Pilha(var n: Int)
             S!![top + 1]
         }
     }
-
     override fun toString(): String
     {
         val res = StringBuilder()
@@ -36,7 +33,6 @@ class Pilha(var n: Int)
         }
         return res.toString()
     }
-
     init
     {
         top = -1

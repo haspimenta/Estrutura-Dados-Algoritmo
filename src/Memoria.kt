@@ -18,12 +18,10 @@ class Memoria(n: Int)
             x
         }
     }
-
     fun free_object(x: Int)
     {
         s!!.push(x)
     }
-
     override fun toString(): String
     {
         val res = StringBuilder()
@@ -43,7 +41,6 @@ class Memoria(n: Int)
         }
         return res.toString()
     }
-
     init
     {
         p = IntArray(n)

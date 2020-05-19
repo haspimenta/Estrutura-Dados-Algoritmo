@@ -5,7 +5,6 @@ open class ArvorePesquisaBinaria(n: Int)
     protected val NIL = 0
     protected var root = NIL
     protected var z = 0
-
     open fun insert(key: String?)
     {
         z = m!!.allocate_object()
@@ -30,7 +29,6 @@ open class ArvorePesquisaBinaria(n: Int)
         {
             this.root = z
         }
-
         else if (m!!.key!!.get(z)!!.compareTo(m!!.key!!.get(y).toString()) < 0) //compara ordem lexicográfical
         {
             m!!.left!![y] = z
@@ -40,7 +38,6 @@ open class ArvorePesquisaBinaria(n: Int)
             m!!.right!![y] = z
         }
     }
-
     override fun toString(): String
     {
         return m.toString().toString() + "root -> " + if (root == 0) "nil" else root
