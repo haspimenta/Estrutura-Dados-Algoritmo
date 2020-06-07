@@ -1,4 +1,6 @@
 @Suppress("NAME_SHADOWING")
+/*As rotações na árvore rubro negra tanto para esquerda e direita é para balancear a árvore,
+a caracteristica da árvore preta e vermelha é esse balanceamento, levando o menor para esquerda e o maior para direita do nó pai*/
 class ArvoreRedBlack(n: Int) : ArvorePesquisaBinaria(n)
 {
     var color: IntArray? = null
@@ -7,6 +9,8 @@ class ArvoreRedBlack(n: Int) : ArvorePesquisaBinaria(n)
     var right: IntArray? = null
     var left: IntArray? = null
     var p: IntArray? = null
+/*rotação para esquerda, são trocados apenas os direcioanmentos esqueda ou direita,
+fazendo as referencias conforme os valores das strings do texto, basenado na lexicografia*/
     fun left_rotate(x: Int) {
         val y = right!![x]
         right!![x] = left!![y]
@@ -20,6 +24,8 @@ class ArvoreRedBlack(n: Int) : ArvorePesquisaBinaria(n)
         left!![y] = x
         p!![x] = y
     }
+/*rotação para direita, são trocados apenas os direcioanmentos esqueda ou direita,
+fazendo as referencias conforme os valores das strings do texto, basenado na lexicografia*/
     fun right_rotate(x: Int)
     {
         val y = left!![x]
@@ -34,10 +40,14 @@ class ArvoreRedBlack(n: Int) : ArvorePesquisaBinaria(n)
         right!![y] = x
         p!![x] = y
     }
+/*deve ser chamado o fixaadicao, que irá corrigir os possíveis casos
+de desbalanceamento que podem ocorrer na árvore*/
     fun insert_fixup(z: Int)
     {
         var z = z
         var y: Int
+/*muda a cor do pai e do tio para preto e dos avós para vermelho, se necessario
+assim, faz o giro e sobe dois níveis na árvore ate atingir a cores certas*/
         while (color!![p!![z]] == RED)
         {
             if (p!![z] == left!![p!![p!![z]]])
@@ -84,9 +94,11 @@ class ArvoreRedBlack(n: Int) : ArvorePesquisaBinaria(n)
                     left_rotate(p!![p!![z]])
                 }
             }
-        } /* while */
+        }
         color!![root] = BLACK
     }
+/*adiciona um novo nodo com valor passado como parâmetro
+na árvore que está rodando*/
     override fun insert(key: String?)
     {
         super.insert(key)

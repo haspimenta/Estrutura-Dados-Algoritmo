@@ -21,9 +21,9 @@ object MainRubroNegro
         val n = words.size
 
         //Só para testar ordem lexicográfica das palavras
-        Arrays.sort(words);
+        //Arrays.sort(words);
+        //System.out.println("Texto em ordem lexicográfica\n" + Arrays.toString(words));
 
-        System.out.println("Texto em ordem lexicográfica\n" + Arrays.toString(words));
         val bs = ArvoreRedBlack(n)
 
         println("\nARVORE RED BLACK\n")

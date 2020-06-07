@@ -11,11 +11,13 @@ open class ArvorePesquisaBinaria(n: Int)
         m!!.key!![z] = key
         var y = NIL
         var x = this.root
+/*enquanto valor comparado da string é menor/diferente que o nodo corrente da árvore vai para subárvore esquerda
+tendo elemento no nodo esquerdo continua a busca*/
         while (x != NIL)
         {
             y = x
-
-            if (m!!.key!!.get(z)!!.compareTo(m!!.key!!.get(x).toString()) < 0) //compara ordem lexicográfical
+//compara ordem lexicográfical
+            if (m!!.key!!.get(z)!!.compareTo(m!!.key!!.get(x).toString()) < 0)
             {
                x = m!!.left!!.get(x)
             }
@@ -24,12 +26,14 @@ open class ArvorePesquisaBinaria(n: Int)
                x = m!!.right!!.get(x)
             }
         }
+//tendo elemento no nodo direito continua a busca
         m!!.p!![z] = y
         if (y == NIL)
         {
             this.root = z
         }
-        else if (m!!.key!!.get(z)!!.compareTo(m!!.key!!.get(y).toString()) < 0) //compara ordem lexicográfical
+//compara ordem lexicográfical
+        else if (m!!.key!!.get(z)!!.compareTo(m!!.key!!.get(y).toString()) < 0)
         {
             m!!.left!![y] = z
         }
