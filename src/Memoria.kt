@@ -1,16 +1,15 @@
-class Memoria(n: Int) //n recebe a contagem de palavras
+class Memoria(n: Int)//n recebe a contagem de palavras
 {
-    //cria o array com numero de palavras para trabalhar com a pilha
-    //temos o nodo pai e os nodos para a direita e esquerda do ponto centro
+/*cria o array com numero de palavras para trabalhar com a pilha
+temos o nodo pai e os nodos para a direita e esquerda do ponto centro*/
     var p: IntArray? = null
     var key: Array<String?>? = null
     var left: IntArray? = null
     var right: IntArray? = null
     val NIL = 0
     var s: Pilha? = null
-    //uma condição para valor "verdadeiro",
-    //verdadeiro é de cor vermelha, caso contrário é preto
-
+/*uma condição para valor "verdadeiro",
+verdadeiro é de cor vermelha, caso contrário é preto*/
     fun allocate_object(): Int
     {
         val x: Int = s!!.pop()
@@ -31,8 +30,8 @@ class Memoria(n: Int) //n recebe a contagem de palavras
     {
         val res = StringBuilder()
         res.append("\n")
-        //o nodo com valor que foi enviado como parâmetro
-        //pega o menor valor na árvore dependendo do nodo que está em execução no momento, para esquerda ou direita
+/*o nodo com valor que foi enviado como parâmetro
+pega o menor valor na árvore dependendo do nodo que está em execução no momento, para esquerda ou direita*/
         for (k in p!!.indices.reversed())
         {
             res.append(k)
@@ -48,10 +47,10 @@ class Memoria(n: Int) //n recebe a contagem de palavras
         }
         return res.toString()
     }
+/*cria o array com numero de palavras para trabalhar com a pilha
+temos o nodo pai e os nodos para a direita e esquerda do ponto centro*/
     init
     {
-        //cria o array com numero de palavras para trabalhar com a pilha
-        // temos o nodo pai e os nodos para a direita e esquerda do ponto centro
         p = IntArray(n)
         key = arrayOfNulls(n)
         left = IntArray(n)

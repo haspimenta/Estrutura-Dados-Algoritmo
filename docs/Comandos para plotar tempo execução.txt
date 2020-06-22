@@ -1,0 +1,7 @@
+gnuplot> set title 'Tempo execeção bucket'
+gnuplot> set key above
+gnuplot> set xlabel 'Quantidade Amostras por bucket'
+gnuplot> set ylabel 'Tempo em MS'
+set xtic rotate by 90
+#set output 'TaxaCrescimento.pdf'
+gnuplot> plot 'C:\Users\hgals\OneDrive\Área de Trabalho\TaxaCrescimento.txt' using 1:2 title 'Algoritm Bucket' with lines smooth csplines

@@ -1,5 +1,5 @@
 # Estrutura de Dados e Algoritmo
-EDA - ESTIG - IPBEJA
+EDA - ESTIG
 Hugo Alexandre Silva
 nº 18544
 18544@stu.ipbeja.pt

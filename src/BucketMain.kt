@@ -16,9 +16,10 @@ import kotlin.collections.ArrayList
 
 object BucketMain
 {
-    private const val N_BUCKETS = 100 //numero de buckets
-    private const val N_SAMPLES = 1000 //numero de amostras
-    private const val DEFAULT_SAMPLE_SIZE = 10 //tamanho standard da amostra (incrimentada a cada iteração)
+    private const val N_BUCKETS = 1000 //numero de buckets
+    private const val N_SAMPLES = 10000 //numero de amostras
+    private const val DEFAULT_SAMPLE_SIZE = 12 //tamanho standard da amostra (incrimentada a cada iteração)
+    private const val percentage = 10
 
     @JvmStatic
     @Throws(InterruptedException::class, IOException::class)
@@ -37,35 +38,32 @@ object BucketMain
         val buckets = BucketSort(toSort, N_BUCKETS) //ordernar os valores em buckets
         PrintBuckets(buckets) //imprimir resultado (test)
     }
-
     //criar um array random para gerar valores, testando até o numero de amostras para taxa de crescimento
     @Throws(FileNotFoundException::class, UnsupportedEncodingException::class)
     private fun TestBucketSort(nSamples: Int, nSampleSize: Int): Unit
     {
-            val writer = PrintWriter("docs/TaxaCrescimento.txt", "UTF-8")
+        val startTime = System.currentTimeMillis()
+        val writer = PrintWriter("docs/TaxaCrescimento.txt", "UTF-8")
 
-            for (i in 0 until nSamples)
+        for (i in 1 until nSamples)
+        {
+            val testSort = java.util.ArrayList<Int>()
+            //val sampleSize = (nSampleSize * (i + 1) - ((nSampleSize * (i + 1)) * percentage) / 100) //calculo para numero de amostras com um desconto de 10%
+            val sampleSize = nSampleSize * (i + 1) // calculo normal para numero de amostras por tempo
+
+            for (x in 0 until sampleSize)
             {
-                val testSort = java.util.ArrayList<Int>()
-                val sampleSize = nSampleSize * (i + 1)
-
-                for (x in 0 until sampleSize)
-                {
-                    testSort.add(Random().nextInt(255))
-                }
-
-                val startTime = System.currentTimeMillis()
-                BucketSort(testSort, nSampleSize)
-
-                val endTime = System.currentTimeMillis()
-                val elapsedTime = endTime - startTime
-
-                println("Amostra com " + testSort.size + "  valores - tempo: " + elapsedTime + " ms")
-                writer.print("${testSort.size} $elapsedTime\n")
+                testSort.add(Random().nextInt(255))
             }
+            BucketSort(testSort, nSampleSize)
+            val endTime = System.currentTimeMillis()
+            val elapsedTime = endTime - startTime
+
+            println("Amostra com " + testSort.size + "  valores - tempo: " + elapsedTime + " ms")
+            writer.print("${testSort.size} $elapsedTime\n")
+        }
         writer.close()
     }
-
     //criando a array de pixels da imagem inserida, através de linhas e colunas
     private fun GetPixelValues(path: String): ArrayList<Int>
     {
@@ -81,7 +79,6 @@ object BucketMain
         }
         return values
     }
-
     //iniciando o algoritmo bucketsort com os devidos passos
     private fun BucketSort(toSort: ArrayList<Int>, nBuckets: Int): ArrayList<ArrayList<Int>>
     {
@@ -91,7 +88,6 @@ object BucketMain
         {
             buckets.add(ArrayList<Int>())
         }
-
         //encontrar o valor máximo do array para ordenar
         var max = 0
         for (i in toSort.indices)
@@ -101,7 +97,6 @@ object BucketMain
                 max = toSort[i]
             }
         }
-
         //distribuir itens pelos buckets
         for (i in toSort.indices)
         {
@@ -116,7 +111,6 @@ object BucketMain
         }
         return buckets
     }
-
     //aplicando o insertion a cada bucket com a sua devida ordenação
     private fun InsertionSort(bucket: ArrayList<Int>)
     {
@@ -132,18 +126,17 @@ object BucketMain
             bucket[j] = temp
         }
     }
-
     //imprimindo os resultados obtidos
     @Throws(IOException::class)
     private fun PrintBuckets(buckets: ArrayList<ArrayList<Int>>): Unit
     {
-            val writer = PrintWriter("docs/Histogram.txt", "UTF-8")
-            for (i in buckets.indices)
-            {
-                //println("bucket $i: " + Arrays.toString(buckets[i].toTypedArray())) //imprime valores dentro dos buckets
-                println("bucket " + i + ": " + buckets[i].size) //imprime tamanho dos buckets
-                writer.print("$i ${buckets[i].size}\n") //Balde : Tamanho
-            }
-            writer.close()
+        val writer = PrintWriter("docs/Histogram.txt", "UTF-8")
+        for (i in buckets.indices)
+        {
+            //println("bucket $i: " + Arrays.toString(buckets[i].toTypedArray())) //imprime valores dentro dos buckets
+            println("bucket " + i + ": " + buckets[i].size) //imprime tamanho dos buckets
+            writer.print("$i ${buckets[i].size}\n") //Balde : Tamanho
+        }
+        writer.close()
     }
 }

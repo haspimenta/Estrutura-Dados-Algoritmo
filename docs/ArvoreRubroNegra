@@ -1,0 +1,46 @@
+Uma árvore rubro-negra é um tipo de árvore binária de busca balanceada, uma estrutura de dados usada em ciência da computação,
+tipicamente para implementar vetores associativos. A estrutura original foi inventada em 1972,
+por Rudolf Bayer[carece de fontes] que a chamou de "Árvores Binárias B Simétricas",
+mas adquiriu este nome moderno em um artigo de 1978 escrito por Leonidas J. Guibas e Robert Sedgewick.
+Ela é complexa, mas tem um bom pior-caso de tempo de execução para suas operações e é eficiente na prática:
+pode-se buscar, inserir, e remover em tempo O(log n), onde n é o número total de elementos da árvore.
+De maneira simplificada, uma árvore rubro-negra é uma árvore de busca binária que insere e remove de forma inteligente,
+para assegurar que a árvore permaneça aproximadamente balanceada.
+
+Uma árvore rubro-negra é um tipo especial de árvore binária, usada em ciência da computação para organizar dados que possam ser comparáveis.
+Nas árvores rubro-negras, os nós folhas não são relevantes e não contém dados. Estas folhas não precisam ser mantidas em memória de
+computador - basta apenas um ponteiro para nulo para identificá-las — mas algumas operações em árvores rubro-negras são simplificadas
+se os nós folha forem explicitados. Para economizar memória, algumas vezes um nó sentinela interpreta o papel de todos os nós folha;
+todas as referências dos nós internos para os nós folha apontam para o nó sentinela.
+Árvores rubro-negras, como todas as árvores binárias de busca, permitem travessia em-ordem de elementos de maneira eficiente,
+pois é possível acessar o pai de qualquer nó. O tempo de busca resulta da travessia da raiz a folha, desta forma uma árvore balanceada,
+tendo a menor altura possível, resulta em tempo de busca O(log n).
+Uma árvore rubro-negra é uma árvore de busca binária onde cada nó tem um atributo de cor, vermelho ou preto. Além dos requisitos ordinários impostos pelas árvores de busca binárias, as árvores rubro-negras tem os seguintes requisitos adicionais:
+
+Um nó é vermelho ou preto.
+A raiz é preta. (Esta regra é usada em algumas definições. Como a raiz pode sempre ser alterada de vermelho para preto, mas não sendo válido o oposto, esta regra tem pouco efeito na análise.)
+Todas as folhas(nil) são pretas.
+Ambos os filhos de todos os nós vermelhos são pretos
+Todo caminho de um dado nó para qualquer de seus nós folhas descendentes contem o mesmo número de nós pretos
+
+Essas regras asseguram uma propriedade crítica das árvores rubro-negras: que o caminho mais longo da raiz a qualquer folha
+não seja mais do que duas vezes o caminho mais curto da raiz a qualquer outra folha naquela árvore. O resultado é que a árvore
+é aproximadamente balanceada. Como as operações de inserção, remoção, e busca de valores necessitam de tempo de pior caso proporcional
+à altura da árvore, este limite proporcional a altura permite que árvores rubro-negras sejam eficientes no pior caso, diferentemente
+de árvore de busca binária.
+
+Para perceber por que essas propriedades garantem isto, basta observar que nenhum caminho pode ter dois nós vermelhos sucessivos,
+devido à propriedade 4. O caminho mais curto possível tem todos os nós pretos, e o caminho mais longo possível alterna entre nós
+vermelhos e pretos. Desde que todos os caminhos máximos têm o mesmo número de nós pretos, pela propriedade 5, isto mostra que nenhum
+caminho é mais do que duas vezes mais longo que qualquer outro caminho.
+
+Em muitas das representações de estruturas de dados em árvore, é possível para um nó pai ter só um filho, e os nós folha contêm dados.
+É possível representar árvores rubro-negras neste paradigma, mas ele modifica várias propriedades e deixa os algoritmos mais complexos.
+Por essa razão, este artigo usa "folhas nulas", que não contêm nenhum dado e simplesmente servem para indicar onde a árvore termina,
+como mostrado acima. Esses nós muitas vezes são omitidos dos desenhos, resultando em uma árvore que parece contradizer os princípios
+acima mencionados, mas que de fato não faz. Uma conseqüência disto é que todo nó interno (não-folha) têm dois filhos,
+embora um ou ambos filhos possam ser folhas nulas.
+
+Alguns explicam uma árvore rubro-negra como uma árvore de busca binária cujas bordas, em vez de nós, são coloridas em vermelho ou preto,
+mas isto não faz nenhuma diferença. A cor de um nó na terminologia deste artigo corresponde à cor da borda que une o nó ao seu pai,
+exceto que o nó de raiz é sempre preto (propriedade 2) ao passo que a borda correspondente não existe.

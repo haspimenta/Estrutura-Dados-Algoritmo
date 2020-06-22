@@ -42,6 +42,7 @@ tendo elemento no nodo esquerdo continua a busca*/
             m!!.right!![y] = z
         }
     }
+//imprimos para verificar a ordem
     override fun toString(): String
     {
         return m.toString().toString() + "root -> " + if (root == 0) "nil" else root
