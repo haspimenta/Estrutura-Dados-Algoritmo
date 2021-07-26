@@ -1,8 +1,4 @@
 # Estrutura de Dados e Algoritmo
-EDA - ESTIG
-Hugo Alexandre Silva
-nº 18544
-18544@stu.ipbeja.pt
 
 Seguindo o enunciado trabalho encontra-se dividido em 4 partes que correspondem às divisões da matéria leccionada na disciplina:
 1. algoritmos de ordenação e análise da complexidade computacional dos algoritmos;
